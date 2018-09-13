@@ -32,8 +32,12 @@ function multiply(num1, num2) {
 		return sum;
 	}
 
-	else {
+	else if (num2 < 0) {
 		return -sum
+	}
+
+	else {
+		return 0;
 	}
 	
 }
