@@ -8,6 +8,10 @@
 
 // Your code :
 
+function sub (figure, figure2) {
+	return figure-figure2
+}
+
 //* Begin of tests
 const assert = require('assert')
 const rand = Math.random()

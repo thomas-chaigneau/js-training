@@ -6,6 +6,12 @@
  *
  */
 
+function sentence(arrayOfStr) {
+
+	let str = arrayOfStr
+
+	return str.join(" ");
+}
 
 //* Begin of tests
 const assert = require('assert')

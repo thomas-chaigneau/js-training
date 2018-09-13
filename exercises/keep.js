@@ -12,9 +12,33 @@
  *
  */
 
+ function keepFirst (str) {
+ 	str = str.slice(0, 2);
+ 	return str;
+ }
+
+ function keepLast (str) {
+ 	str = str.slice(str.length -2, str.length)
+ 	return str;
+ }
+
+function keepFirstLast (str) {
+	str = str.slice(2, 4)
+	return str;
+}
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
-// End of tests */
+assert.strictEqual(typeof keepFirstLast, 'function')
+assert.strictEqual(keepFirstLast.length, 1)
+assert.deepStrictEqual(keepFirst('aahelloaa'), 'aa')
+assert.deepStrictEqual(keepFirst('rrcoucourr'), 'rr')
+assert.deepStrictEqual(keepFirst('22cou   couEE'), '22')
+assert.deepStrictEqual(keepLast('aahelloaa'), 'aa')
+assert.deepStrictEqual(keepLast('rrcoucourr'), 'rr')
+assert.deepStrictEqual(keepLast('22cou   couEE'), 'EE')
+
+assert.deepStrictEqual(keepFirstLast('aahelloaa'), 'he')
+assert.deepStrictEqual(keepFirstLast('rrcoucourr'), 'co')
+assert.deepStrictEqual(keepFirstLast('22cou   couEE'), 'co')

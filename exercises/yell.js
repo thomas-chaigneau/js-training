@@ -6,9 +6,17 @@
  *
  */
 
+ function yell (str) {
+ 	return str.toUpperCase();
+ }
+
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
-// End of tests */
+assert.strictEqual(typeof yell, 'function')
+assert.strictEqual(yell.length, 1)
+assert.deepStrictEqual(yell('you'), 'YOU')
+assert.deepStrictEqual(yell('you are null'), 'YOU ARE NULL')
+assert.deepStrictEqual(yell('you are good'), 'YOU ARE GOOD')
+

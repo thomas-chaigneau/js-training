@@ -8,6 +8,17 @@
  *
  */
 
+function repeat(str, num) {
+
+	let longstring = "";
+
+	for ( let i=0; i < num; i+=1) {
+		longstring += str	
+	}
+
+	return longstring
+ }
+
 //* Begin of tests
 const assert = require('assert')
 

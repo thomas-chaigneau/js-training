@@ -7,9 +7,16 @@
  *
  */
 
+ function whisper (str) {
+ 	return str.toLowerCase();
+ }
+
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
-// End of tests */
+assert.strictEqual(typeof whisper, 'function')
+assert.strictEqual(whisper.length, 1)
+assert.deepStrictEqual(whisper('YOU'), 'you')
+assert.deepStrictEqual(whisper('YOU ARE NULL'), 'you are null')
+assert.deepStrictEqual(whisper('YOU ARE GOOD'), 'you are good')

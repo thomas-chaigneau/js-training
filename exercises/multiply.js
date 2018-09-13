@@ -10,6 +10,34 @@
 
 // Your code :
 
+function abs(number) {
+	if (number < 0) {
+		return number = -number;
+	}
+	else {
+		return number;
+	}
+}
+
+function multiply(num1, num2) {
+	let sum = 0
+	let i = 0
+
+	while ( i < abs(num2) ) {
+		sum += num1;
+		i++;
+	}
+
+	if (num2>0) {
+		return sum;
+	}
+
+	else {
+		return -sum
+	}
+	
+}
+
 //* Begin of tests
 const assert = require('assert')
 
