@@ -37,7 +37,7 @@ function multiply(num1, num2) {
 	}
 
 	else if (num2 < 0 && num1 == 0) {
-		return +0;
+		return 0;
 	}
 
 	else {
@@ -56,7 +56,7 @@ assert.strictEqual(multiply.toString().includes('*'), false)
 assert.strictEqual(multiply.toString().includes('/'), false)
 assert.strictEqual(multiply(34, 78), 2652)
 assert.strictEqual(multiply(123, 0), 0)
-assert.strictEqual(multiply(0, -230), 0)
+assert.strictEqual(multiply(0, -230), -0)
 assert.strictEqual(multiply(0, 0), 0)
 assert.strictEqual(multiply(123, -22), -2706)
 assert.strictEqual(multiply(-22, 123), -2706)
